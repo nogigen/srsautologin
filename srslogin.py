@@ -2,8 +2,8 @@ from selenium import webdriver
 import email
 import imaplib
 
-srsUsername = "21601881"
-srsPassword = "pgjvo62q"
+srsUsername = "" # id here
+srsPassword = "" # password here
 
 driver = webdriver.Chrome()
 driver.get("https://stars.bilkent.edu.tr/srs/")
@@ -18,10 +18,10 @@ passwordBox.send_keys(srsPassword)
 submitBtn.click()
 
 # getting the verification code from mail
-username = 'nogay.evirgen@ug.bilkent.edu.tr' # username of mail
-password = 'pgjvo62q' # password of mail
+username = '' # username of mail
+password = '' # password of mail
 
-mail = imaplib.IMAP4_SSL("mail.bilkent.edu.tr")
+mail = imaplib.IMAP4_SSL("") #imap server as parameter
 mail.login(username,password)
 
 mail.select("inbox")
